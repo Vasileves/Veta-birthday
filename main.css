@@ -84,14 +84,29 @@ img {
 #shark {
   top: 44vh;
   left: 10vw;
-  transform: scale(1.5);
   pointer-events: none;
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  animation-delay: 10s;
+  -webki-animation-delay: 10s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 #wom {
   top: 30vh;
   left: 57vw;
   pointer-events: none;
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  animation-delay: 10s;
+  -webki-animation-delay: 10s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 #ball {
@@ -181,6 +196,52 @@ canvas{
     transform: translateY(0);
     }
     }
+
+    @-webkit-keyframes slideInLeft {
+      0% {
+      -webkit-transform: translateX(-120%);
+      transform: translateX(-120%);
+      visibility: visible;
+      }
+      100% {
+      -webkit-transform: translateX(0) scale(1.5);
+      transform: translateX(0) scale(1.5);
+      }
+      }
+      @keyframes slideInLeft {
+      0% {
+      -webkit-transform: translateX(-120%);
+      transform: translateX(-120%);
+      visibility: visible;
+      }
+      100% {
+      -webkit-transform: translateX(0) scale(1.5);
+      transform: translateX(0) scale(1.5);
+      }
+      }
+
+      @-webkit-keyframes slideInRight {
+        0% {
+        -webkit-transform: translateX(150%) scale(0.5);
+        transform: translateX(150%) scale(0.5);
+        visibility: visible;
+        }
+        100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        }
+        }
+
+        @keyframes slideInRight {
+        0% {
+        -webkit-transform: translateX(150%) scale(0.5);
+        transform: translateX(150%) scale(0.5);
+        visibility: visible;
+        }
+        100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        }
 
 
 
