@@ -1,0 +1,64 @@
+<!doctype HTML>
+<html>
+  <head>
+    <title>Happy Birthday, Veta!</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+
+<!-- vid -->
+<video autoplay muted loop id="myVideo" style='opacity: 100%'>
+  <source src="res/bg.mp4" type="video/mp4">
+</video>
+
+<!-- img -->
+
+<img id='putin' src="res/putin.gif"/>
+<img id='ball' src="res/ball.gif"/>
+
+
+<!-- wlcm -->
+ <div id=wlcm2><div id ='wlcm'></div>
+<a class='myButton centrobut' id='wlcm3' onclick="playAudio('music.ogg')">прэсс хэре</a></div>
+<div id="preloader" class="visible"></div>
+
+<!-- leave -->
+<div class='nav'>
+<a href="#" class='myButton navbut'>дальше</a>
+<a href="#" class='myButton navbut'>назад</a>
+</div>
+
+
+<!-- particles.js -->
+<div id="particles-js"></div>
+
+<!-- scripts -->
+<script type='text/javascript' src='./assets/particles.js'></script>
+<script type='text/javascript' src='./assets/app.js'></script>
+
+<script>
+  function playAudio(url) {
+  new Audio(url).play();
+$("#wlcm2").remove();
+}
+</script>
+
+<script>
+  function loadData() {
+  return new Promise((resolve, reject) => {
+    setTimeout(resolve, 20);
+  })
+}
+
+loadData()
+  .then(() => {
+    let preloaderEl = document.getElementById('preloader');
+    preloaderEl.classList.add('hidden');
+    preloaderEl.classList.remove('visible');
+  });
+</script>
+
+
+  </body>
+</html>
