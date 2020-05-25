@@ -81,6 +81,19 @@ img {
   pointer-events: none;
 }
 
+#shark {
+  top: 44vh;
+  left: 10vw;
+  transform: scale(1.5);
+  pointer-events: none;
+}
+
+#wom {
+  top: 30vh;
+  left: 57vw;
+  pointer-events: none;
+}
+
 #ball {
   top: -3vh;
   left: 37vw;
